@@ -1,0 +1,144 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: #262626;
+}
+ul{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:  translate(-50%, -50%);
+    margin: 20;
+    padding: 0;
+    display: flex;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    display: block;
+    padding: 20px 1.4vw;
+    margin: 5px 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    border-radius: 17px;
+}
+
+ul li a:hover {
+    color: black;
+    transition: .15s;
+}
+    
+ul li a:before{
+    content: '';
+    position: absolute;
+    width: 10;
+    height: 10;
+    left: 46.5%;
+    top: 0;
+    background-color: #262626;
+    transition: .2s;
+    z-index: -1;
+    border-radius: 17px;
+}
+ul li a:hover:before{
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0;
+    border-radius:20px;
+    transition-delay: .03s;
+    background-color: rgb(65, 177, 221);
+}
+    
+ul li a:after{
+    content: '';
+    position: absolute;
+    width: 15;
+    height: 19;
+    left: 46%;
+    top: -30;
+    background-color: rgb(65, 177, 221);
+    transition: .12s;
+    z-index: -1;
+    transform: rotate(45deg);
+    border-radius: 0% 100% 50% 50% / 0% 50% 50% 100%;
+}
+ul li a:hover:after{
+    width: 13;
+    height: 17;
+    left: 46%;
+    top: 10;
+}
+
+#GlowingButton{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+#GlowingButton:hover{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+#GlowingButton::before{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+#GlowingButton span{
+    position: relative;
+    z-index: 1;
+}
+#GlowingButton i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#GlowingButton i::before{
+    content: '';
+    position: absolute;
+    top: -3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transition: 0.5s;
+    transform: translateX(-50%);
+}
+#GlowingButton:hover i::before{
+    width: 20px;
+    left: 20%;
+    
+}
+
+#GlowingButton i::after{
+    content: '';
+    position: absolute;
+    bottom: -3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transition: 0.5s;
+    transform: translateX(-50%);
+}
+#GlowingButton:hover i::after{
+    width: 20px;
+    left: 80%;
+    
+}
