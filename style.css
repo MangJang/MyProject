@@ -1,3 +1,6 @@
+/*
+🔻🔻🔻🔻index🔻🔻🔻🔻
+*/
 body{
     margin: 0;
     padding: 0;
@@ -6,7 +9,7 @@ body{
 }
 ul{
     position: absolute;
-    top: 50%;
+    top: 47.5%;
     left: 50%;
     transform:  translate(-50%, -50%);
     margin: 20;
@@ -20,7 +23,7 @@ ul li a{
     position: relative;
     display: block;
     padding: 20px 1.4vw;
-    margin: 5px 15px;
+    margin: 35px 15px 5px 15px;
     text-decoration: none;
     text-transform: uppercase;
     color: white;
@@ -61,7 +64,7 @@ ul li a:after{
     width: 15;
     height: 19;
     left: 46%;
-    top: -30;
+    top: -25;
     background-color: rgb(65, 177, 221);
     transition: .12s;
     z-index: -1;
@@ -74,6 +77,11 @@ ul li a:hover:after{
     left: 46%;
     top: 10;
 }
+
+/*
+🔺🔺🔺🔺index🔺🔺🔺🔺
+🔻🔻🔻🔻button🔻🔻🔻🔻
+*/
 
 #GlowingButton{
     position: relative;
@@ -141,4 +149,67 @@ ul li a:hover:after{
     width: 20px;
     left: 80%;
     
+}
+
+/*
+🔺🔺🔺🔺button🔺🔺🔺🔺
+🔻🔻🔻🔻wave🔻🔻🔻🔻
+*/
+
+.waveSection{
+    position: relative;
+    width: 100%;
+    height: 50%;
+    background-size: corver;
+    background-attachment: fixed;
+}
+.waveSection .wave{
+    position: absolute;
+    width: 100%;
+    height: 243;
+    /* 웨이브 이미지의 세로값 */
+    bottom: 0;
+    left: 0;
+    background: url("img/wave.png");
+    animation: animate 8s linear infinite;
+}
+.waveSection .wave:before{
+    content: '';
+    width: 100%;
+    height: 243;
+    /* 웨이브 이미지의 세로값 */
+    background: url("img/wave.png");
+    position: absolute;
+    bottom: 0;
+    opacity: 0.4;
+    animation: animate-reverse 8s linear infinite;
+}
+.waveSection .wave:after{
+    content: '';
+    width: 100%;
+    height: 243px;
+    /* 웨이브 이미지의 세로값 */
+    background: url("img/wave.png");
+    position: absolute;
+    bottom: 0;
+    opacity: 0.6;
+    animation-delay: -3s;
+    animation: animate 13s linear infinite;
+}
+@keyframes animate{
+    0%{
+        background-position: 0;
+    }
+    100%{
+        background-position: 1360px;
+        /* 웨이브 이미지의 가로값 */
+    }
+}
+@keyframes animate-reverse{
+    0%{
+        background-position: 1360px;
+    }
+    100%{
+        background-position: 0;
+    }
 }
