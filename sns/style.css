@@ -1,0 +1,49 @@
+.youtube-icon{
+    width: 90;
+    height: 20;
+}
+.header{
+    position: sticky;
+    display: grid;
+    top:0;
+    height: 56px;
+    padding: 10px;
+}
+.top_{
+    display: grid;
+    height: 56px;
+    grid-template-columns: 0.15fr 1fr 1fr 65px 1fr 0.6fr;
+    vertical-align: center;
+    align-items: center;
+}
+.header a{
+    text-decoration: none;
+    color: black;
+}
+.serech{
+    padding-top: 3px;
+    height: 40px;
+    width: 41vw;
+    border-radius: 4px 0px 0px 4px;
+    border-width: 1px;
+    font-size: 110%;
+}
+#magnifying{
+    text-align: center;
+    margin-left: -6px;
+    width: 40px;
+    border:solid;
+    padding: 11px;
+    border-width: 1px;
+    border-radius: 0px 4px 4px 0px;
+    border-left: none
+}
+.profile{
+    height: 45;
+    border-radius: 50%;
+}
+.right{
+    display: grid;
+    grid-template-columns: 0.5fr 0.4fr 0.8fr;
+    align-items: center;
+}
