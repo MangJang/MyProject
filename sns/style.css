@@ -19,10 +19,11 @@
 }
 .container{
     display: grid;
-    grid-template-columns: 1fr 2fr 150px;
+    grid-template-columns: 200px 1fr 200px;
     height: 56px;
     vertical-align: center;
     align-items: center;
+    text-align: center;
     border-bottom: 1px solid #999;
 }
 .header a{
@@ -56,15 +57,14 @@
     min-width: 180px;
 }
 .mid{
-    width: 700px;
-    text-align: center;
-    align-items: center;
+    width: 100%;
+    min-width: 620px;
 }
 .right{
     right: 50%;
-    width: 150px;
+    width: 200px;
     display: grid;
-    grid-template-columns: repeat(4 ,auto);
+    grid-template-columns: repeat(4, auto);
     text-align: center;
     align-items: center;
 }
@@ -78,6 +78,7 @@
 .renderer a{
     text-decoration: none;
     color: black;
+    padding-left: 24px;
 }
 .renderer a i{
     margin-right: 24;
@@ -86,7 +87,14 @@
     display: grid;
     grid-template-rows: repeat(11, 40px);
     align-items: center;
-    padding: 12px 24px;
+    padding: 12px 24px 12px 0px;
+}
+.renderer .guide-main{
+    display:flex;
+    align-items:center;
+    height: 40px;
+    color: black;
+    background-color: rgba(0, 0, 0, .15);
 }
 .video-section{
     height: 640px;
@@ -151,4 +159,31 @@
 }
 .video .lore .video-lore-text div{
     align-items: center;
+}
+.video-field{
+    display: grid;
+    grid-template-rows: 56px 1fr;
+}
+.category{
+    min-width: 900;
+    text-align: center;
+    padding: 14 0;
+}
+.category-button{
+    height: 60;
+    margin: 0 6;
+    padding: 4 12;
+    font-size: 14px;
+    border: 1px solid #999;
+    border-radius: 16px;
+}
+.category-button-main{
+    color: white;
+    height: 60;
+    margin: 0 6;
+    padding: 4 12;
+    font-size: 14px;
+    border: 1px solid #999;
+    border-radius: 16px;
+    background-color: black;
 }
