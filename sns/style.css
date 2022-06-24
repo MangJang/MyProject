@@ -183,7 +183,7 @@
     grid-template-rows: 56px 1fr;
 }
 .category{
-    min-width: 1050;
+    width: 100%;
     text-align: center;
     padding: 14 0;
 }
@@ -196,6 +196,21 @@
     font-size: 14px;
     border: 1px solid #999;
     border-radius: 16px;
+}
+@media (max-width:1310px) {
+    .category-button:nth-child(12){
+        display: none;
+    }
+}
+@media (max-width:1210px) {
+    .category-button:nth-child(11){
+        display: none;
+    }
+}
+@media (max-width:1150px) {
+    .category-button:nth-child(10){
+        display: none;
+    }
 }
 .category-button-main{
     text-decoration: none;
