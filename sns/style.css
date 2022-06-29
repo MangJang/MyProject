@@ -82,11 +82,11 @@ body{
 }
 .microphone{
     position: relative;
-    top: 8;
+    top: 7;
 }
 #magnifying{
     position: relative;
-    top: 7;
+    top: 8;
     margin: 0 0 0 -6;
     width: 40px;
     border:solid;
