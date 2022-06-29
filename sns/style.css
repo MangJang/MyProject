@@ -72,13 +72,17 @@ body{
 }
 .serech{
     width: calc(100% - 300px);
-    border-radius: 4px 0px 0px 4px;
-    border-width: 1px;
+    border: 1px solid #777;
+    border-radius: 3px 0px 0px 3px;
     font-size: 16;
     padding: 0 6 0 10;
     height: 40px;
     max-width: 550;
     font-family: "Roboto";
+}
+.serech:focus{
+    border: 2px solid #1c62b9;
+    outline: none;
 }
 .magnifying{
     cursor: pointer;
@@ -86,10 +90,10 @@ body{
     width: 50;
     height: 40;
     align-items: center;
-    border:solid;
-    border-width: 1px;
-    border-radius: 0px 4px 4px 0px;
+    border: 1px solid #777;
+    border-radius: 0px 3px 3px 0px;
     border-left: none;
+    background-color: white;
 }
 .microphone{
     margin: 0 18;
