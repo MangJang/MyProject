@@ -70,17 +70,24 @@ body{
 }
 .serech{
     position: relative;
+    top: 8;
     width: calc(100% - 300px);
     border-radius: 4px 0px 0px 4px;
     border-width: 1px;
     font-size: 16;
-    padding: 2 6 2 10;
+    padding: 0 6 0 10;
     height: 40px;
     max-width: 550;
     font-family: "Roboto";
 }
+.microphone{
+    position: relative;
+    top: 8;
+}
 #magnifying{
-    margin: 6 0 6 -6;
+    position: relative;
+    top: 7;
+    margin: 0 0 0 -6;
     width: 40px;
     border:solid;
     padding: 11;
@@ -100,6 +107,7 @@ body{
     width: 100%;
     min-width: 200px;
     height: 56;
+    
 }
 .right{
     right: 50%;
