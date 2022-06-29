@@ -1,6 +1,17 @@
-html{
-    
+
+.account-menu::-webkit-scrollbar {
+    width: 14;
 }
+.account-menu::-webkit-scrollbar-thumb {
+    background: #606060;
+    background-clip: padding-box;
+    border: 3px solid transparent;
+    border-radius: 10px;
+}
+.account-menu::-webkit-scrollbar-track {
+    margin-top: 82;
+}
+
 body::-webkit-scrollbar {
     width: 14;
 }
@@ -233,12 +244,25 @@ body{
     background-color: white;
     border: 1px solid #dddddd;
     font-size: 14;
+    overflow:visible;
+    overflow-x: hidden;
+    max-height: calc(100% - 55px);
 }
 .account-menu-profile{
     display: grid;
     grid-template-columns: 56px 140px;
     height: 50;
     padding: 16;
+    background-color: white;
+    width: 300;
+    position: fixed;
+    top: 55;
+}
+.account-menu-setting{
+    margin-top: 82;
+    background-color: white;
+    overflow: auto;
+    height: 612;
 }
 .account-menu-text{
     display: grid;
