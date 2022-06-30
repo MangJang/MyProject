@@ -1,23 +1,10 @@
 a{
     cursor: pointer;
 }
-.account-menu::-webkit-scrollbar {
+::-webkit-scrollbar {
     width: 14;
 }
-.account-menu::-webkit-scrollbar-thumb {
-    background: #606060;
-    background-clip: padding-box;
-    border: 3px solid transparent;
-    border-radius: 10px;
-}
-.account-menu::-webkit-scrollbar-track {
-    margin-top: 82;
-}
-
-body::-webkit-scrollbar {
-    width: 14;
-}
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #606060;
     background-clip: padding-box;
     border: 3px solid transparent;
@@ -124,6 +111,33 @@ body{
     grid-template-columns: repeat(4, auto);
     text-align: center;
     align-items: center;
+}
+
+.youtube-app-menu{
+    display: grid;
+    grid-template-rows: repeat(4, 55px);
+    position: fixed;
+    background: white;
+    top: 65;
+    right: 110;
+    width: 210;
+    height: 220;
+}
+.youtube-app-menu a{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    height: 38;
+    padding: 8 32 8 16;
+}
+.youtube-app-menu a img{
+    width: 24;
+    height: 24;
+    margin: auto 0;
+}
+.youtube-app-menu a span{
+    margin: auto 0;
+    font-size: 14;
 }
 
 .bodyer{
@@ -251,9 +265,74 @@ body{
     grid-template-columns: repeat(2, auto);
     grid-template-rows: 320px 320px;
 }
+
+.notification-menu{
+    display: grid;
+    grid-template-rows: 48px 1fr;
+    position: fixed;
+    top: 65;
+    right: 60;
+    background-color: white;
+    width: 478;
+    height: 640;
+}
+.notification-menu-text{
+    display: grid;
+    grid-template-columns: 1fr 56px;
+    height: 48;
+    border-bottom: 2px solid #e0e0e0;
+}
+.notification-menu-text span{
+    margin: auto 16;
+}
+.notification-menu-text a{
+    width: 40;
+    height: 40;
+    margin: auto auto;
+}
+.notification-menu-text a i{
+    font-size: 24;
+    margin: 8 8;
+}
+
+.notification-menu-bar{
+    overflow: scroll;
+    overflow-x: hidden;
+}
+.notification-vide{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 64px 232px 1fr;
+    padding: 16 40 16 16;
+    min-height: 48;
+}
+.notification-channel img{
+    width: 48;
+    height: 48;
+    border-radius: 50%;
+}
+.notification-vide-info{
+    display: grid;
+    grid-template-rows: 1fr 18px;
+}
+.notification-vide-info-title{
+    margin-bottom: 8;
+    font-size: 14;
+}
+.notification-vide-info-time{
+    font-size: 12;
+    color: #606060;
+}
+
+.notification-vide-thumbnail img{
+    width: 86;
+    margin: 0 13;
+}
+
+
 .account-menu{
     position: fixed;
-    top: 55;
+    top: 65;
     right: 20;
     width: 300;
     height: 694;
@@ -262,15 +341,15 @@ body{
     font-size: 14;
     overflow:visible;
     overflow-x: hidden;
-    max-height: calc(100% - 55px);
+    max-height: calc(100% - 65px);
 }
 .account-menu-profile{
     display: grid;
-    grid-template-columns: 56px 140px;
+    grid-template-columns: 56px 1fr;
+    width: 268;
     height: 50;
     padding: 16;
     background-color: white;
-    width: 300;
     position: fixed;
     top: 55;
 }
@@ -282,12 +361,17 @@ body{
 }
 .account-menu-text{
     display: grid;
+    width: 144;
     grid-template-rows: 22px 28px;
+}
+.account-name{
+    font-family: "Roboto","Arial",sans-serif;
+    font-size: 16;
 }
 .account-control{
     text-decoration: none;
     color: #065fd4;
-    width: 140;
+    width: 144;
     height: 22;
     margin-top: 6;
 }

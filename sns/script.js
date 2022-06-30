@@ -1,5 +1,47 @@
 let moreView = true
 let accountMenu = true
+let youtubeApp = true
+let notificationMenu = true
+
+let profile = document.querySelector(".profile-button")
+profile.addEventListener("click",
+    function(e) {
+        if(accountMenu) {
+            accountMenuChange(false)
+            youtubeAppChange(true)
+            notificationMenuChange(true)
+        } else if(!accountMenu) {
+            accountMenuChange(true)
+        }
+    }
+)
+
+let app = document.querySelector(".youtube-app-button")
+app.addEventListener("click",
+    function(e) {
+        if(youtubeApp){
+            youtubeAppChange(false)
+            accountMenuChange(true)
+            notificationMenuChange(true)
+        } else if(!youtubeApp){
+            youtubeAppChange(true)
+        }
+    }
+)
+
+let notification = document.querySelector(".notification-button")
+notification.addEventListener("click", 
+    function(e) {
+        if(notificationMenu){
+            notificationMenuChange(false)
+            accountMenuChange(true)
+            youtubeAppChange(true)
+        } else if(!notificationMenu){
+            notificationMenuChange(true)
+        }
+    }
+)
+
 
 let item = document.querySelector(".item")
 item.addEventListener("click",
@@ -16,9 +58,11 @@ document.addEventListener("DOMContentLoaded",
     function(e) {
         document.addEventListener("keydown", 
             function(e){
-                if(!accountMenu) {
+                if(!accountMenu || !youtubeApp || !notificationMenu) {
                     if(e.key === "Escape") {
                         accountMenuChange(true)
+                        youtubeAppChange(true)
+                        notificationMenuChange(true)
                     }
                 }
             }
@@ -79,18 +123,6 @@ window.addEventListener("resize", function() {
         .style.display = "block"
     }
 })
-
-let profile = document.querySelector(".profile")
-profile.addEventListener("click",
-    function(e) {
-        if(accountMenu) {
-            accountMenuChange(false)
-        } else if(!accountMenu) {
-            accountMenuChange(true)
-        }
-    }
-)
-
 
 
 
@@ -154,5 +186,37 @@ function accountMenuChange(b){
         .style.display = "block"
         
         accountMenu = false
+    }
+}
+
+function notificationMenuChange(b){
+    if (b){
+        document.querySelector(".notification-menu")
+        .style.display = "none"
+        
+        notificationMenu = true
+    } else if(!b){
+        document.querySelector(".notification-menu")
+        .style.display = "block"
+        
+        notificationMenu = false
+    }
+}
+
+
+
+
+
+function youtubeAppChange(b){
+    if (b){
+        document.querySelector(".youtube-app-menu")
+        .style.display = "none"
+        
+        youtubeApp = true
+    } else if(!b){
+        document.querySelector(".youtube-app-menu")
+        .style.display = "block"
+        
+        youtubeApp = false
     }
 }

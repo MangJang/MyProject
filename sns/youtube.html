@@ -31,13 +31,13 @@
                     <a style="font-size: 24px">
                         <i class="fa fa-thin fa-video"></i>
                     </a>
-                    <a style="font-size: 24px">
-                        <i class="fa fa-light fa-ellipsis-vertical"></i>
+                    <a style="font-size: 24px" class="youtube-app-button">
+                        <i class="fa-solid fa-ellipsis-vertical"></i>
                     </a>
-                    <a style="font-size: 24px">
+                    <a style="font-size: 24px" class="notification-button">
                         <i class="fa fa-thin fa-bell"></i>
                     </a>
-                    <a>
+                    <a class="profile-button">
                         <img src="..\img\profile.png" class="profile">
                     </a>
                 </div>
@@ -171,9 +171,65 @@
             <a class="category-button">반려동물</a>
             <a></a>
         </div>
+        <div class="youtube-app-menu" style="display: none">
+            <a class="youtube-tv">
+                <img src="..\img\youtubeTv.png"> <span>YouTube TV</span>
+            </a>
+            <a class="youtube-music">
+                <img src="..\img\youtubeMusic.png"> <span>YouTube Music</span>
+            </a>
+            <a class="youtube-kids">
+                <img src="..\img\youtubeKids.png"> <span>YouTube Kids</span>
+            </a>
+            <a class="youtube-logo">
+                <img src="..\img\youtubeLogo.png"> <span>YouTube for Artists</span>
+            </a>
+        </div>
+        <div class="notification-menu" style="display: none;">
+            <div class="notification-menu-text">
+                <span>알림</span>
+                <a>
+                    <i class="fa-solid fa-gear"></i>
+                </a>
+            </div>
+            <div class="notification-menu-bar">
+                <div class="notification-vide">
+                    <a class="notification-channel">
+                        <img src="..\img\channel.jpg">
+                    </a>
+                    <div class="notification-vide-info">
+                        <a class="notification-vide-info-title">
+                            알림영상1
+                        </a>
+                        <a class="notification-vide-info-time">
+                            1시간 전
+                        </a>
+                    </div>
+                    <a class="notification-vide-thumbnail">
+                        <img src="..\img\thumbnail.png">
+                    </a>
+                </div>
+                <div class="notification-vide">
+                    <a class="notification-channel">
+                        <img src="..\img\channel.jpg">
+                    </a>
+                    <div class="notification-vide-info">
+                        <a class="notification-vide-info-title">
+                            알림영상2
+                        </a>
+                        <a class="notification-vide-info-time">
+                            2시간 전
+                        </a>
+                    </div>
+                    <a class="notification-vide-thumbnail">
+                        <img src="..\img\thumbnail.png">
+                    </a>
+                </div>
+            </div>
+        </div>
         <div class="account-menu" style="display: none">
             <div class="account-menu-profile">
-                <img src="..\img\profile.png" class="profile" style="width: 40;">
+                <img src="..\img\profile.png" class="profile" style="width: 40; height: 40;">
                 <div class="account-menu-text">
                     <span class="account-name">유튜브 계정</span>
                     <a class="account-control">
