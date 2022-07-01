@@ -254,16 +254,15 @@ body{
     position: static;
     z-index: 10;
     top: 125;
-    left: 232;
-    height: 640px;
-    width: calc(100% - 272px);
-    min-width: 800;
+    left: 230;
+    height: calc(100% - 170px);
+    width: calc(100% - 270px);
     padding: 0 20 20 20;
-    margin-left: 232;
+    margin-left: 230;
     margin-top: 125;
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    grid-template-rows: 320px 320px;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(3, 20vw);
 }
 
 .notification-menu{
@@ -314,10 +313,6 @@ body{
 .notification-vide-info{
     display: grid;
     grid-template-rows: 1fr 18px;
-}
-.notification-vide-info-title{
-    margin-bottom: 8;
-    font-size: 14;
 }
 .notification-vide-info-time{
     font-size: 12;
@@ -438,37 +433,19 @@ body{
     font-size: 16;
     text-align: center;
 }
-@media (min-width:1480px) {
-    .video-section{
-        grid-template-columns: repeat(3, auto);
-        min-width: 1200;
-    }
-}
-@media (min-width:1880px) {
-    .video-section{
-        grid-template-columns: repeat(4, auto);
-        min-width: 1600;
-    }
-}
 .video-section a{
     text-decoration: none;
     margin: 10;
 }
-.video{
-    height: 300px;
-    width: 360px;
-    margin-right: 10;
-    margin-left: 10;
-}
 .video .lore{
-    width: 300;
+    width: 100%;
     display: grid;
     height: 100px;
     grid-template-columns: 48px 1fr;
 }
 .video .thumbnail{
-    width: 360;
-    height: 200;
+    width: 100%;
+    height: auto;
 }
 .video .lore .channel{
     height: 36;
@@ -477,18 +454,25 @@ body{
     margin: 12 12 0 0;
 }
 .video .lore .title{
-    padding: 12 0;
-    width: 300;
-    height: 36;
-    font-size: 1.4rem;
-    font-weight: 500;
+    text-align: left;
+    margin: auto 0;
+    max-height: 36px;
+    overflow: hidden;
+    padding-right: 24;
+    font-size: 16px;
+    font-family: "Roboto","Arial",sans-serif;
     color: black;
 }
 .video .lore .video-lore-text{
-    width: 300;
+    width: 100%;
     display: grid;
-    grid-template-rows: 50px 50px;
+    grid-template-rows: 46px 54px;
     color: #606060;
+    overflow: hidden;
+    word-break: break-all;
+}
+.video .lore .video-lore-text span{
+    overflow:initial;
 }
 .video .lore .video-lore-text div{
     align-items: center;
@@ -647,6 +631,8 @@ body{
     .video-section{
         margin-left: 72;
         margin-top: 125;
+        width: calc(100% - 112px);
+        grid-template-rows: repeat(3, 23vw);
     }
 
     .youtube-more{
@@ -657,5 +643,17 @@ body{
     .category{
         left: 82;
         width: calc(100% - 82px);
+    }
+}
+@media (max-width:1150px) {
+    .video-section{
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(3, 29vw);
+    }
+}
+@media (max-width:900px) {
+    .video-section{
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 38vw);
     }
 }
