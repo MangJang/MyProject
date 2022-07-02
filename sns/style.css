@@ -43,7 +43,6 @@ body{
     height: 56px;
     align-items: center;
     text-align: center;
-    border-bottom: rgba(96, 96, 96, .3) solid 1px;
 }
 @media (max-width: 630px) {
     .container{
@@ -122,6 +121,7 @@ body{
     right: 110;
     width: 210;
     height: 220;
+    border: 1px solid #dddddd;
 }
 .youtube-app-menu a{
     cursor: pointer;
@@ -253,16 +253,43 @@ body{
 .video-section{
     position: static;
     z-index: 10;
-    top: 125;
+    top: 130;
     left: 230;
-    height: calc(100% - 170px);
     width: calc(100% - 270px);
-    padding: 0 20 20 20;
+    padding: 20;
     margin-left: 230;
-    margin-top: 125;
+    margin-top: 122;
     display: grid;
-    grid-template-columns: repeat(4, 25%);
-    grid-template-rows: repeat(3, 20vw);
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    overflow: hidden;
+}
+
+.upload-menu{
+    display: grid;
+    grid-template-rows: repeat(2, 40px);
+    position: fixed;
+    top: 65;
+    right: 145;
+    width: 230;
+    height: 80;
+    padding: 8 0;
+    background: white;
+    border: 1px solid #dddddd;
+}
+.upload-menu a{
+    display: grid;
+    height: 50%;
+    grid-template-columns: 40px 1fr;
+    padding: 0 16;
+    align-items: center;
+    text-decoration: none;
+}
+.upload-menu a i{
+    width: 40;
+    height: 32;
+    font-size: 24;
+    padding-top: 8;
 }
 
 .notification-menu{
@@ -274,6 +301,7 @@ body{
     background-color: white;
     width: 478;
     height: 640;
+    border: 1px solid #dddddd;
 }
 .notification-menu-text{
     display: grid;
@@ -371,7 +399,7 @@ body{
     margin-top: 6;
 }
 
-.account-menu-channel {
+.account-menu-channel{
     display: grid;
     grid-template-rows: repeat(5, 40px);
     padding: 8 16;
@@ -433,6 +461,9 @@ body{
     font-size: 16;
     text-align: center;
 }
+.video{
+    overflow: auto;
+}
 .video-section a{
     text-decoration: none;
     margin: 10;
@@ -453,16 +484,7 @@ body{
     border-radius: 50%;
     margin: 12 12 0 0;
 }
-.video .lore .title{
-    text-align: left;
-    margin: auto 0;
-    max-height: 36px;
-    overflow: hidden;
-    padding-right: 24;
-    font-size: 16px;
-    font-family: "Roboto","Arial",sans-serif;
-    color: black;
-}
+
 .video .lore .video-lore-text{
     width: 100%;
     display: grid;
@@ -471,11 +493,31 @@ body{
     overflow: hidden;
     word-break: break-all;
 }
-.video .lore .video-lore-text span{
-    overflow:initial;
+.video .lore .video-lore-text .title{
+    display: -webkit-box;
+    vertical-align: middle;
+    
+    text-align: left;
+    margin: auto 0;
+    max-height: 36px;
+    overflow: hidden;
+    margin-right: 24;
+    font-size: 16px;
+    font-family: "Roboto","Arial",sans-serif;
+    color: black;
+    width: calc(100% - 24px);
+
+    /* 2줄 넘으면 자르기 */
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 1.2;
+    height: 3.6em;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
-.video .lore .video-lore-text div{
+.video .lore .video-lore-text .zxcv{
     align-items: center;
+    font-size: 14;
 }
 .video-field{
     display: grid;
@@ -630,9 +672,9 @@ body{
 
     .video-section{
         margin-left: 72;
-        margin-top: 125;
+        margin-top: 122;
         width: calc(100% - 112px);
-        grid-template-rows: repeat(3, 23vw);
+        grid-template-rows: repeat(2, auto);
     }
 
     .youtube-more{
@@ -648,12 +690,52 @@ body{
 @media (max-width:1150px) {
     .video-section{
         grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat(3, 29vw);
+        grid-template-rows: repeat(2, auto);
     }
 }
 @media (max-width:900px) {
     .video-section{
         grid-template-columns: repeat(2, auto);
-        grid-template-rows: repeat(3, 38vw);
+        grid-template-rows: repeat(3, auto);
+    }
+    .guide{
+        display: none;
+    }
+    .video-section{
+        margin-left: 0;
+        width: calc(100% - 40px);
+    }
+    .category{
+        left: 8;
+        width: calc(100% - 16px);
+    }
+    .video .lore .video-lore-text .title{
+        font-size: 14;
+    }
+    .video .lore .video-lore-text .video-info{
+        align-items: center;
+        font-size: 12;
+    }
+}
+@media (max-width:510px) {
+    .guide{
+        display: none;
+    }
+    .video-section{
+        grid-template-columns: repeat(1, auto);
+        grid-template-rows: repeat(6, auto);
+        padding: 20 0;
+        width: 100%;
+    }
+    .category{
+        left: 8;
+        width: calc(100% - 16px);
+    }
+    .video .lore .video-lore-text .title{
+        font-size: 14;
+    }
+    .video .lore .video-lore-text .video-info{
+        align-items: center;
+        font-size: 12;
     }
 }

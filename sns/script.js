@@ -2,6 +2,7 @@ let moreView = true
 let accountMenu = true
 let youtubeApp = true
 let notificationMenu = true
+let uploadMenu = true
 
 let profile = document.querySelector(".profile-button")
 profile.addEventListener("click",
@@ -10,6 +11,7 @@ profile.addEventListener("click",
             accountMenuChange(false)
             youtubeAppChange(true)
             notificationMenuChange(true)
+            uploadMenuChange(true)
         } else if(!accountMenu) {
             accountMenuChange(true)
         }
@@ -23,8 +25,23 @@ app.addEventListener("click",
             youtubeAppChange(false)
             accountMenuChange(true)
             notificationMenuChange(true)
+            uploadMenuChange(true)
         } else if(!youtubeApp){
             youtubeAppChange(true)
+        }
+    }
+)
+
+let upload = document.querySelector(".upload-button")
+upload.addEventListener("click",
+    function(e) {
+        if(uploadMenu){
+            uploadMenuChange(false)
+            accountMenuChange(true)
+            notificationMenuChange(true)
+            youtubeAppChange(true)
+        } else if(!uploadMenu){
+            uploadMenuChange(true)
         }
     }
 )
@@ -36,6 +53,7 @@ notification.addEventListener("click",
             notificationMenuChange(false)
             accountMenuChange(true)
             youtubeAppChange(true)
+            uploadMenuChange(true)
         } else if(!notificationMenu){
             notificationMenuChange(true)
         }
@@ -58,11 +76,13 @@ document.addEventListener("DOMContentLoaded",
     function(e) {
         document.addEventListener("keydown", 
             function(e){
-                if(!accountMenu || !youtubeApp || !notificationMenu) {
+                if(!accountMenu || !youtubeApp ||
+                    !notificationMenu || !uploadMenu) {
                     if(e.key === "Escape") {
                         accountMenuChange(true)
                         youtubeAppChange(true)
                         notificationMenuChange(true)
+                        uploadMenuChange(true)
                     }
                 }
             }
@@ -205,7 +225,19 @@ function notificationMenuChange(b){
 
 
 
-
+function uploadMenuChange(b){
+    if (b){
+        document.querySelector(".upload-menu")
+        .style.display = "none"
+        
+        uploadMenu = true
+    } else if(!b){
+        document.querySelector(".upload-menu")
+        .style.display = "block"
+        
+        uploadMenu = false
+    }
+}
 
 function youtubeAppChange(b){
     if (b){
