@@ -4,6 +4,37 @@ let youtubeApp = true
 let notificationMenu = true
 let uploadMenu = true
 
+document.addEventListener("DOMContentLoaded", 
+    function(e) {
+        document.addEventListener("keydown", 
+            function(e){
+                if(e.key === "Escape") {
+                    accountMenuChange(true)
+                    youtubeAppChange(true)
+                    notificationMenuChange(true)
+                    uploadMenuChange(true)
+                }
+            }
+        )
+    }
+)
+
+
+document.addEventListener("DOMContentLoaded", 
+    function(e) {
+        let p = document.querySelector(".date")
+        date = new Date()
+        year = date.getFullYear()
+        month = date.getMonth() + 1
+        day = date.getDate()
+
+        p.textContent = year + ". " + month + ". " + day
+        
+    }
+)
+
+
+
 let profile = document.querySelector(".profile-button")
 profile.addEventListener("click",
     function(e) {
@@ -72,23 +103,6 @@ item.addEventListener("click",
     }
 )
 
-document.addEventListener("DOMContentLoaded", 
-    function(e) {
-        document.addEventListener("keydown", 
-            function(e){
-                if(!accountMenu || !youtubeApp ||
-                    !notificationMenu || !uploadMenu) {
-                    if(e.key === "Escape") {
-                        accountMenuChange(true)
-                        youtubeAppChange(true)
-                        notificationMenuChange(true)
-                        uploadMenuChange(true)
-                    }
-                }
-            }
-        )
-    }
-)
 
 window.addEventListener("resize", function() {
     if(window.innerWidth <= 1320) {

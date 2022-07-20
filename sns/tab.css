@@ -1,0 +1,232 @@
+
+
+.youtube-app-menu{
+    z-index: 50;
+    display: grid;
+    grid-template-rows: repeat(4, 55px);
+    position: fixed;
+    background: white;
+    top: 65;
+    right: 110;
+    width: 210;
+    height: 220;
+    border: 1px solid #dddddd;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: calc(100% - 65px);
+}
+.youtube-app-menu a{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    height: 38;
+    padding: 8 16;
+}
+.youtube-app-menu a img{
+    width: 24;
+    height: 24;
+    margin: auto 0;
+}
+.youtube-app-menu a span{
+    margin: auto 0;
+    font-size: 14;
+    width: 122;
+}
+
+
+.upload-menu{
+    z-index: 50;
+    display: grid;
+    grid-template-rows: repeat(2, 40px);
+    position: fixed;
+    top: 65;
+    right: 145;
+    width: 250;
+    height: 80;
+    padding: 8 0;
+    background: white;
+    border: 1px solid #dddddd;
+    overflow: auto;
+    overflow-x: hidden;
+    max-height: calc(100% - 79px);
+}
+.upload-menu a{
+    display: grid;
+    height: 40;
+    grid-template-columns: 40px auto;
+    padding: 0 16;
+    align-items: center;
+    text-decoration: none;
+}
+.upload-menu a i{
+    width: 40;
+    height: 32;
+    font-size: 24;
+    padding-top: 8;
+}
+
+.notification-menu{
+    z-index: 50;
+    display: grid;
+    grid-template-rows: 48px 1fr;
+    position: fixed;
+    top: 65;
+    right: 60;
+    background-color: white;
+    width: 478;
+    height: 640;
+    max-height: calc(100% - 65px);
+    border: 1px solid #dddddd;
+}
+.notification-video-section{
+    overflow: auto;
+    overflow-x: hidden;
+    height: calc(100% - 50px);
+}
+.notification-menu-text{
+    display: grid;
+    grid-template-columns: 1fr 56px;
+    height: 48;
+    border-bottom: 2px solid #e0e0e0;
+}
+.notification-menu-text span{
+    margin: auto 16;
+}
+.notification-menu-text a{
+    width: 40;
+    height: 40;
+    margin: auto auto;
+}
+.notification-menu-text a i{
+    font-size: 24;
+    margin: 8 8;
+}
+
+.notification-vide{
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 64px 232px 1fr;
+    padding: 16 40 16 16;
+    min-height: 48;
+}
+.notification-channel img{
+    width: 48;
+    height: 48;
+    border-radius: 50%;
+}
+.notification-vide-info{
+    display: grid;
+    grid-template-rows: 1fr 18px;
+}
+.notification-vide-info-time{
+    font-size: 12;
+    color: #606060;
+}
+
+.notification-vide-thumbnail img{
+    width: 86;
+    margin: 0 13;
+}
+
+
+.account-menu{
+    z-index: 50;
+    position: fixed;
+    top: 65;
+    right: 20;
+    width: 300;
+    height: 694;
+    background-color: white;
+    border: 1px solid #dddddd;
+    font-size: 14;
+    max-height: calc(100% - 65px);
+}
+.account-menu-profile{
+    display: grid;
+    grid-template-columns: 56px 1fr;
+    width: 268;
+    height: 50;
+    padding: 16;
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+}
+.account-menu-setting{
+    background-color: white;
+    height: 612;
+    overflow: auto;
+    overflow-x: hidden;
+    height: calc(100% - 82px);
+}
+.account-menu-text{
+    display: grid;
+    width: 144;
+    grid-template-rows: 22px 28px;
+}
+.account-name{
+    font-size: 16;
+}
+.account-control{
+    text-decoration: none;
+    color: #065fd4;
+    width: 144;
+    height: 22;
+    margin-top: 6;
+}
+
+.account-menu-channel{
+    display: grid;
+    grid-template-rows: repeat(5, 40px);
+    padding: 8 16;
+    align-items: center;
+    text-decoration: none;
+    border-bottom: 2px solid #e5e5e5;
+}
+.account-menu-channel i{
+    text-align: center;
+    width: 24;
+    font-size: 24;
+    padding-right: 16;
+}
+.account-menu-channel a{
+    display: grid;
+    grid-template-columns: 40px 196px 32px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    height: 40;
+}
+
+.account-menu-other{
+    display: grid;
+    grid-template-rows: repeat(8, 40px);
+    padding: 8 16;
+    align-items: center;
+    border-bottom: 2px solid #e5e5e5;
+}
+.account-menu-other i{
+    text-align: center;
+    width: 24;
+    font-size: 24;
+    padding: 8 16 0 0;
+}
+.account-menu-other a{
+    display: grid;
+    grid-template-columns: 40px 196px 32px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    height: 40;
+}
+
+.account-menu-limited-mod{
+    height: 40;
+    padding: 8 16;
+}
+.account-menu-limited-mod a{
+    display: grid;
+    grid-template-columns: 236px 32px;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    height: 40;
+}
