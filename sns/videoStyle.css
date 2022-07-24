@@ -344,11 +344,20 @@ body{
     font-size: 16;
 }
 
+.category-section{
+    height: 48;
+    position: relative;
+    overflow: hidden;
+}
 .category{
     height: 48;
     width: 750;
-    text-align: center;
+    text-align: left;
     line-height: 48px;
+
+    transition-duration: 0.15s;
+    transition-timing-function: cubic-bezier(0.05,0,0,1);
+    will-change: auto;
 }
 .category a{
     text-decoration: none;
@@ -364,6 +373,30 @@ body{
 .category a:nth-child(1){
     color: white;
     background-color: black;
+}
+
+.next{
+    display: grid;
+    grid-template-columns: 30px 32px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 48;
+}
+.next-button{
+    width: 32;
+    height: 32;
+    font-size: 16;
+    text-align: center;
+    background-color: white;
+    line-height: 48px;
+    margin: 8 0;
+}
+.next-gradient{
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.5), white, white);
+}
+.next-button i{
+    line-height: 32px;
 }
 
 .contents-video{

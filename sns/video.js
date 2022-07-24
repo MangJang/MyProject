@@ -21,6 +21,17 @@ moreLoreButton.addEventListener("click",
     }
 )
 
+let categoryX = 0
+
+let nextButton = document.querySelector(".next-button")
+nextButton.addEventListener("click", 
+    function(e) {
+        categoryX-= 160
+        document.querySelector(".category").
+        style.transform = "translateX(" + categoryX + "px)"
+    }
+)
+
 
 
 
