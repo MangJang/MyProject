@@ -26,12 +26,42 @@ let categoryX = 0
 let nextButton = document.querySelector(".next-button")
 nextButton.addEventListener("click", 
     function(e) {
-        categoryX-= 160
+        document.querySelector(".back").
+        style.visibility = "visible"
+
+        if(categoryX <= -188){
+            categoryX = -348
+
+            document.querySelector(".next").
+            style.visibility = "hidden"
+        } else {
+            categoryX-= 160
+        }
+
         document.querySelector(".category").
         style.transform = "translateX(" + categoryX + "px)"
     }
 )
 
+let backButton = document.querySelector(".back-button")
+backButton.addEventListener("click", 
+    function(e) {
+        document.querySelector(".next").
+        style.visibility = "visible"
+
+        if(categoryX >= -160) {
+            categoryX = 0
+
+            document.querySelector(".back").
+            style.visibility = "hidden"
+        } else {
+            categoryX+= 160
+        }
+
+        document.querySelector(".category").
+        style.transform = "translateX(" + categoryX + "px)"
+    }
+)
 
 
 
