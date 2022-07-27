@@ -2,10 +2,13 @@
     <head>
         <title>YouTube</title>
         <link rel="shortcut icon" href="..\img\youtube.ico">
+
         <link href="videoStyle.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="videoStyle.css">
+
         <link href="tab.css" rel="stylesheet">
-        <link rel="stylesheet" type="text/css" href="tab.css">
+
+        <link href="header.css" rel="stylesheet">
+
         <script src="https://kit.fontawesome.com/760c40f62e.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -349,7 +352,7 @@
                 </div>
                 <div class="info2">
                     <div class="channel">
-                        <a>
+                        <a href="channel.html">
                             <img src="..\img\channel.jpg">
                         </a>
                         <div class="text">
@@ -394,7 +397,13 @@
                     </div>
                     <div class="commentAdd">
                         <img src="..\img\channel.jpg" style="height: 40; width: 40; border-radius: 50%;">
-                        <input placeholder="댓글 추가..." class="commentInput">
+                        <div>
+                            <input placeholder="댓글 추가..." class="commentInput">
+                            <div class="commentInputButton">
+                                <button class="commentCancel" style="display:none">취소</button>
+                                <button class="commentUpload" style="display:none">댓글</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="commentField">
                         <div class="comment">

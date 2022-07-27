@@ -1,0 +1,225 @@
+
+.guide{
+    width: 230;
+    height: calc(100% - 76px);
+    background-color: white;
+    overflow: auto;
+    overflow-x: hidden;
+    position: fixed;
+    top: 66;
+    left: 8;
+}
+.renderer{
+    font-size: 14px;
+    display: grid;
+    grid-template-rows: repeat(11, 40px);
+    align-items: center;
+    padding: 12px 0px 12px 0px;
+}
+.renderer a{
+    text-decoration: none;
+    color: black;
+    padding-left: 24px;
+    height: 40;
+    vertical-align: middle;
+}
+.renderer .hide-guide{
+    display: grid;
+    grid-template-rows: repeat(1, 40px);
+    align-items: center;
+}
+.renderer .hide-guide a:nth-child(1){
+    display: none;
+}
+.renderer .hide-guide a:nth-child(2){
+    display: none;
+}
+.renderer .hide-guide a:nth-child(3){
+    display: none;
+}
+.renderer .hide-guide a:nth-child(4){
+    display: none;
+}
+.renderer a i{
+    font-size: 20;
+    margin-right: 20;
+    padding-top: 10px;
+}
+.renderer .guide-main{
+    background-color: rgba(0, 0, 0, .15);
+}
+.subscribe{
+    display: grid;
+    grid-template-rows: repeat(9, 40px);
+    align-items:center;
+    padding: 12 24;
+}
+.subscribe a{
+    height: 40;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+}
+.subscribe a img{
+    border-radius: 50%;
+    height: 24;
+    margin-right: 20;
+    vertical-align: middle;
+}
+.youtube-more{
+    font-size: 14px;
+    display: grid;
+    grid-template-rows: 35px repeat(6, 40px)
+                        20px repeat(4, 40px);
+    align-items: center;
+    padding: 12 0;
+}
+.youtube-more span{
+    color: #606060;
+    font-size: 14;
+    padding-left: 20;
+}
+.youtube-more a{
+    height: 40;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    border-radius: 50%;
+    padding-left: 24;
+}
+.youtube-more a i{
+    font-size: 20;
+    margin-right: 20;
+    padding-top: 12px;
+}
+
+
+@media (max-width:1320px) {
+    .guide{
+        width: 72;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+    .renderer{
+        width: 72;
+        display: grid;
+        grid-template-rows: repeat(4, 74px) 0px 74px;
+        vertical-align: middle;
+    }
+
+    .renderer > a:nth-child(1){
+        display: grid;
+        width: 72;
+        height: 44;
+        padding: 0;
+        margin: 0 0 20 0;
+        grid-template-rows: 30px 14px;
+        text-align: center;
+        background-color: white;
+        font-size: 10px;
+    }
+    .renderer > a:nth-child(1) i{
+        vertical-align: top;
+        padding: 0;
+        margin: 0;
+    }
+
+    .renderer > a:nth-child(2){
+        display: grid;
+        width: 72;
+        height: 44;
+        padding: 0;
+        margin: 0 0 20 0;
+        grid-template-rows: 30px 14px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 10px;
+    }
+    .renderer > a:nth-child(2) i{
+        padding: 0;
+        margin: 7 0 0 0;
+    }
+    
+    .renderer > a:nth-child(3){
+        display: grid;
+        width: 72;
+        height: 44;
+        padding: 0;
+        margin: 0 0 20 0;
+        grid-template-rows: 30px 14px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 10px;
+    }
+    .renderer > a:nth-child(3) i{
+        padding: 0;
+        margin: 7 0 0 0;
+    }
+    
+    .renderer > a:nth-child(4){
+        display: grid;
+        width: 72;
+        height: 44;
+        padding: 0;
+        margin: 0 0 20 0;
+        grid-template-rows: 30px 14px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 10px;
+    }
+    .renderer > a:nth-child(4) i{
+        padding: 0;
+        margin: 7 0 0 0;
+    }
+    
+    .renderer > a:nth-child(6){
+        display: grid;
+        width: 72;
+        height: 44;
+        padding: 0;
+        margin: 0 0 20 0;
+        grid-template-rows: 30px 14px;
+        vertical-align: middle;
+        text-align: center;
+        font-size: 10px;
+    }
+    .renderer > a:nth-child(6) i{
+        padding: 0;
+        margin: 7 0 0 0;
+    }
+    .renderer .guide-main{
+        display:flex;
+        align-items:center;
+        height: 40px;
+        color: black;
+    }
+
+    .shorts-guide-hide{
+        display: none;
+        visibility: hidden;
+    }   
+
+    .hide-guide a{
+        display: none;
+    }
+
+    .subscribe{
+        display: none;
+    }
+
+    .youtube-more{
+        display: none;
+    }
+}
+
+@media (max-width:900px) {
+    .guide{
+        display: none;
+    }
+}
+@media (max-width:510px) {
+    .guide{
+        display: none;
+    }
+}

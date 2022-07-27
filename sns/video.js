@@ -63,6 +63,83 @@ backButton.addEventListener("click",
     }
 )
 
+document.addEventListener("DOMContentLoaded", 
+    function(e) {
+        let p = document.querySelector(".date")
+        date = new Date()
+        year = date.getFullYear()
+        month = date.getMonth() + 1
+        day = date.getDate()
+
+        p.textContent = year + ". " + month + ". " + day
+        
+    }
+)
+
+let comment = document.querySelector(".commentInput")
+comment.addEventListener("focus", 
+    function(e){
+        document.querySelector(".commentAdd").
+        style.height = 80
+        
+        document.querySelector(".commentCancel").
+        style.display = "block"
+        
+        document.querySelector(".commentUpload").
+        style.display = "block"
+        
+    }
+)
+
+let commentCancelButton = document.querySelector(".commentCancel")
+commentCancelButton.addEventListener("click", 
+    function(e){
+        document.querySelector(".commentAdd").
+        style.height = ""
+        
+        document.querySelector(".commentCancel").
+        style.display = "none"
+        
+        document.querySelector(".commentUpload").
+        style.display = "none"
+
+        comment.value = ''
+
+        document.querySelector(".commentUpload").
+        style.backgroundColor = ""
+        
+        document.querySelector(".commentUpload").
+        style.color = ''
+        
+        document.querySelector(".commentUpload").
+        style.cursor = ''
+        
+    }
+)
+
+comment.addEventListener("input", 
+    function(e){
+        if(comment.value == ''){
+            document.querySelector(".commentUpload").
+            style.backgroundColor = ''
+            
+            document.querySelector(".commentUpload").
+            style.color = ''
+            
+            document.querySelector(".commentUpload").
+            style.cursor = ''
+        } else {
+            document.querySelector(".commentUpload").
+            style.backgroundColor = "#065fd4"
+            
+            document.querySelector(".commentUpload").
+            style.color = "white"
+            
+            document.querySelector(".commentUpload").
+            style.cursor = "pointer"
+        }
+    }
+)
 
 
 

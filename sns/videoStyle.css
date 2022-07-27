@@ -146,6 +146,7 @@ body{
     padding: 20 0 8 0;
     height: 66;
     border-bottom: 1px solid #d3d3d3;
+    overflow: hidden;
 }
 .viewButton{
     display: grid;
@@ -292,12 +293,31 @@ body{
     height: 25;
     font-family: "Roboto";
     border: none;
-    border-bottom: 1px solid #909090;
+    border-bottom: 1px solid #aaaaaa;
+    margin-bottom: 8;
 }
 .commentInput:focus{
     border: none;
     outline: none;
     border-bottom: 2px solid black;
+}
+
+.commentInputButton{
+    display: flex;
+    justify-content:right;
+    height: 40;
+}
+.commentCancel{
+    cursor: pointer;
+    flex-basis: 80px;
+    margin: 0 4;
+    border: none;
+}
+.commentUpload{
+    flex-basis: 80px;
+    margin: 0 4;
+    border: none;
+    color: #909090;
 }
 
 .comment{

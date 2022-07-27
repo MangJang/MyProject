@@ -18,202 +18,13 @@ body{
     margin: 0 8;
     overflow-x: hidden;
 }
-.youtube-icon{
-    padding: 12px;
-    width: 90;
-}
-.youtube-icon-img{
-    width: 90;
-    height: 20;
-}
-.menu{
-    padding: 12px;
-    width: 24px;
-    height: 24px;
-}
-.header{
-    position: fixed;
-    background-color: white;
-    top: 0;
-    left: 8;
-    width: calc(100% - 16px);
-    height: 56px;
-    padding: 10 10 0 10;
-}
-.container{
-    display: grid;
-    grid-template-columns: 200px 1fr 200px;
-    height: 56px;
-    align-items: center;
-    text-align: center;
-}
-@media (max-width: 630px) {
-    .container{
-        grid-template-columns: 200px calc(100% - 400px) 200px;
-    }
-    .mid{
-        visibility:hidden;
-    }
-}
-.header a{
-    text-decoration: none;
-    color: black;
-}
-.serech{
-    width: calc(100% - 300px);
-    border: 1px solid #777;
-    border-radius: 3px 0px 0px 3px;
-    font-size: 16;
-    padding: 0 6 0 10;
-    height: 40px;
-    max-width: 550;
-    font-family: "Roboto";
-}
-.serech:focus{
-    border: 2px solid #1c62b9;
-    outline: none;
-}
-.magnifying{
-    cursor: pointer;
-    padding: 1 6;
-    width: 50;
-    height: 40;
-    align-items: center;
-    border: 1px solid #777;
-    border-radius: 0px 3px 3px 0px;
-    border-left: none;
-    background-color: white;
-}
-.microphone{
-    margin: 0 18;
-}
-.profile{
-    width: 32;
-    border-radius: 50%;
-}
-.left{
-    width: 200px;
-    min-width: 180px;
-}
-.mid{
-    display: flex;
-    justify-content:center;
-    width: 100%;
-    min-width: 200px;   
-    height: 56;
-    vertical-align: middle;
-    align-items: center;
-    text-align: center;
-    
-}
-.right{
-    right: 50%;
-    width: 200px;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    text-align: center;
-    align-items: center;
-}
 .bodyer{
     width: 100%;
     height: 100%;
     display: grid;
     grid-template-columns: 224px 1fr;
 }
-.guide{
-    width: 230;
-    height: calc(100% - 76px);
-    background-color: white;
-    overflow: auto;
-    overflow-x: hidden;
-    position: fixed;
-    top: 66;
-    left: 8;
-}
-.renderer{
-    font-size: 14px;
-    display: grid;
-    grid-template-rows: repeat(11, 40px);
-    align-items: center;
-    padding: 12px 0px 12px 0px;
-}
-.renderer a{
-    text-decoration: none;
-    color: black;
-    padding-left: 24px;
-    height: 40;
-    vertical-align: middle;
-}
-.renderer .hide-guide{
-    display: grid;
-    grid-template-rows: repeat(1, 40px);
-    align-items: center;
-}
-.renderer .hide-guide a:nth-child(1){
-    display: none;
-}
-.renderer .hide-guide a:nth-child(2){
-    display: none;
-}
-.renderer .hide-guide a:nth-child(3){
-    display: none;
-}
-.renderer .hide-guide a:nth-child(4){
-    display: none;
-}
-.renderer a i{
-    font-size: 20;
-    margin-right: 20;
-    padding-top: 10px;
-}
-.renderer .guide-main{
-    background-color: rgba(0, 0, 0, .15);
-}
-.subscribe{
-    display: grid;
-    grid-template-rows: repeat(9, 40px);
-    align-items:center;
-    padding: 12 24;
-}
-.subscribe a{
-    height: 40;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    border-radius: 50%;
-}
-.subscribe a img{
-    border-radius: 50%;
-    height: 24;
-    margin-right: 20;
-    vertical-align: middle;
-}
-.youtube-more{
-    font-size: 14px;
-    display: grid;
-    grid-template-rows: 35px repeat(6, 40px)
-                        20px repeat(4, 40px);
-    align-items: center;
-    padding: 12 0;
-}
-.youtube-more span{
-    color: #606060;
-    font-size: 14;
-    padding-left: 20;
-}
-.youtube-more a{
-    height: 40;
-    align-items: center;
-    text-decoration: none;
-    color: black;
-    border-radius: 50%;
-    padding-left: 24;
-}
-.youtube-more a i{
-    font-size: 20;
-    margin-right: 20;
-    padding-top: 12px;
-}
+
 .video-section{
     position: static;
     z-index: 10;
@@ -289,10 +100,6 @@ body{
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
-.video .lore .video-lore-text .zxcv{
-    align-items: center;
-    font-size: 14;
-}
 .video-field{
     display: grid;
     grid-template-rows: 56px 1fr;
@@ -332,133 +139,19 @@ body{
     vertical-align: middle;
 }
 @media (max-width:1320px) {
-    .guide{
-        width: 72;
-        overflow: hidden;
-        vertical-align: middle;
-    }
-    .renderer{
-        width: 72;
-        display: grid;
-        grid-template-rows: repeat(4, 74px) 0px 74px;
-        vertical-align: middle;
-    }
-
-    .renderer > a:nth-child(1){
-        display: grid;
-        width: 72;
-        height: 44;
-        padding: 0;
-        margin: 0 0 20 0;
-        grid-template-rows: 30px 14px;
-        text-align: center;
-        background-color: white;
-        font-size: 10px;
-    }
-    .renderer > a:nth-child(1) i{
-        vertical-align: top;
-        padding: 0;
-        margin: 0;
-    }
-
-    .renderer > a:nth-child(2){
-        display: grid;
-        width: 72;
-        height: 44;
-        padding: 0;
-        margin: 0 0 20 0;
-        grid-template-rows: 30px 14px;
-        vertical-align: middle;
-        text-align: center;
-        font-size: 10px;
-    }
-    .renderer > a:nth-child(2) i{
-        padding: 0;
-        margin: 7 0 0 0;
-    }
-    
-    .renderer > a:nth-child(3){
-        display: grid;
-        width: 72;
-        height: 44;
-        padding: 0;
-        margin: 0 0 20 0;
-        grid-template-rows: 30px 14px;
-        vertical-align: middle;
-        text-align: center;
-        font-size: 10px;
-    }
-    .renderer > a:nth-child(3) i{
-        padding: 0;
-        margin: 7 0 0 0;
-    }
-    
-    .renderer > a:nth-child(4){
-        display: grid;
-        width: 72;
-        height: 44;
-        padding: 0;
-        margin: 0 0 20 0;
-        grid-template-rows: 30px 14px;
-        vertical-align: middle;
-        text-align: center;
-        font-size: 10px;
-    }
-    .renderer > a:nth-child(4) i{
-        padding: 0;
-        margin: 7 0 0 0;
-    }
-    
-    .renderer > a:nth-child(6){
-        display: grid;
-        width: 72;
-        height: 44;
-        padding: 0;
-        margin: 0 0 20 0;
-        grid-template-rows: 30px 14px;
-        vertical-align: middle;
-        text-align: center;
-        font-size: 10px;
-    }
-    .renderer > a:nth-child(6) i{
-        padding: 0;
-        margin: 7 0 0 0;
-    }
-    .renderer .guide-main{
-        display:flex;
-        align-items:center;
-        height: 40px;
-        color: black;
-    }
-
-    .shorts-guide-hide{
-        display: none;
-        visibility: hidden;
-    }   
-
-    .hide-guide a{
-        display: none;
-    }
-
-    .subscribe{
-        display: none;
-    }
-
     .video-section{
         margin-left: 72;
-        margin-top: 122;
-        width: calc(100% - 112px);
-        grid-template-rows: repeat(2, auto);
     }
-
-    .youtube-more{
-        display: none;
-    }
-
 
     .category{
         left: 82;
         width: calc(100% - 90px);
+    }
+
+    .video-section{
+        margin-top: 122;
+        width: calc(100% - 112px);
+        grid-template-rows: repeat(2, auto);
     }
 }
 @media (max-width:1150px) {
@@ -469,14 +162,9 @@ body{
 }
 @media (max-width:900px) {
     .video-section{
+        margin-left: 0;
         grid-template-columns: repeat(2, auto);
         grid-template-rows: repeat(3, auto);
-    }
-    .guide{
-        display: none;
-    }
-    .video-section{
-        margin-left: 0;
         width: calc(100% - 40px);
     }
     .category{
@@ -492,9 +180,6 @@ body{
     }
 }
 @media (max-width:510px) {
-    .guide{
-        display: none;
-    }
     .video-section{
         grid-template-columns: repeat(1, auto);
         grid-template-rows: repeat(6, auto);
