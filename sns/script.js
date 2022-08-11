@@ -93,9 +93,6 @@ item.addEventListener("click",
 
 
 
-
-
-
 function accountMenuChange(b){
     if (b){
         document.querySelector(".account-menu")

@@ -164,21 +164,34 @@
                 </a>
             </div>
         </div>
-        <div class="category">
-            <a></a>
-            <a class="category-button-main">전체</a>
-            <a class="category-button">실시간</a>
-            <a class="category-button">게임</a>
-            <a class="category-button">음악</a>
-            <a class="category-button">믹스</a>
-            <a class="category-button">스포츠</a>
-            <a class="category-button">수학</a>
-            <a class="category-button">뉴스</a>
-            <a class="category-button">액션 어드벤처 게임</a>
-            <a class="category-button">요리</a>
-            <a class="category-button">애니메이션</a>
-            <a class="category-button">반려동물</a>
-            <a></a>
+        <div class="category-container">
+            <div class="category" style="transform: translateX(0px);">
+                <a></a>
+                <a class="category-button-main">전체</a>
+                <a class="category-button">실시간</a>
+                <a class="category-button">게임</a>
+                <a class="category-button">음악</a>
+                <a class="category-button">영화</a>
+                <a class="category-button">믹스</a>
+                <a class="category-button">스포츠</a>
+                <a class="category-button">수학</a>
+                <a class="category-button">뉴스</a>
+                <a class="category-button">액션 어드벤처 게임</a>
+                <a class="category-button">요리 프로그램</a>
+                <a class="category-button">애니메이션</a>
+                <a class="category-button">반려동물</a>
+                <a class="category-button">최근에 업로드된 동영상</a>
+                <a class="category-button">감상한 동영상</a>
+                <a class="category-button">새로운 맞춤 동영상</a>
+            </div>
+            <div class="back" style="visibility: hidden">
+                <a class="back-button"><i class="fa-solid fa-angle-left"></i></a>
+                <div class="back-gradient"></div>
+            </div>
+            <div class="next">
+                <div class="next-gradient"></div>
+                <a class="next-button"><i class="fa-solid fa-angle-right"></i></a>
+            </div>
         </div>
         <div class="upload-menu" style="display: none">
             <a class="video-upload">
@@ -526,7 +539,7 @@
                     <div class="lore">
                         <img class="channel" src="..\img\channel.jpg">
                         <div class="video-lore-text">
-                            <span class="title">유튜브 영상</span>
+                            <div class="title">유튜브 영상</div>
                             <div class="video-info">
                                 유튜브 채널 <i style="font-size: 14px" class="fa-solid fa-circle-check"></i>
                                 <br>
@@ -539,5 +552,6 @@
         </div>
         <script src="script.js"></script>
         <script src="guide.js"></script>
+        <script src="youtube.js"></script>
     </body>
 </html>
