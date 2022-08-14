@@ -1,4 +1,4 @@
-let valueRL = 0
+let valueRL = -45
 let valueUD = -30
 let cube = document.querySelector(".cube")
 
@@ -28,31 +28,72 @@ let firstX = 0;
 let firstY = 0;
 let down = false
 
+let a = -45;
+let b = -30;
+// 마우스를 후에 상자의 기울기 저장
+
 document.addEventListener("DOMContentLoaded", 
 function(e) {
     document.addEventListener("mousedown", 
         function(e){
+            firstX = e.pageX
+            firstY = e.pageY
             down = true
-            firstX = e.pageX
-            firstY = e.pageY
-            console.log(first)
-        }
-    )
-    document.addEventListener("mouseup", 
-        function(e){
-            down = false
-            firstX = e.pageX
-            firstY = e.pageY
         }
     )
     document.addEventListener("mousemove", 
         function(e){
             if(down){
-                valueRL = (e.pageX - firstX) / 10;
-                valueUD = ((firstY - e.pageY) / 10) -30;
+                valueRL = (e.pageX - firstX) / 7;
+                valueUD = (firstY - e.pageY) / 7;
+
+                valueRL += a;
+                valueUD += b;
 
                 cube.style.transform = "rotateX(" + valueUD + "deg) rotateY("+ valueRL + "deg)"
             }
+        }
+    )
+    document.addEventListener("mouseup", 
+        function(e){
+            a = valueRL;
+            b = valueUD
+
+            firstX = e.pageX
+            firstY = e.pageY
+            down = false
+        }
+    )
+
+    
+    document.addEventListener("touchstart", 
+        function(e){
+            down = true
+            firstX = e.touches[0].pageX
+            firstY = e.touches[0].pageY
+        }
+    )
+    document.addEventListener("touchmove", 
+        function(e){
+            if(down){
+                valueRL = (e.touches[0].pageX - firstX) / 7;
+                valueUD = (firstY - e.touches[0].pageY) / 7;
+
+                valueRL += a;
+                valueUD += b;
+
+                cube.style.transform = "rotateX(" + valueUD + "deg) rotateY("+ valueRL + "deg)"
+            }
+        }
+    )
+    document.addEventListener("touchend", 
+        function(e){
+            a = valueRL;
+            b = valueUD
+
+            down = false
+            firstX = e.touches[0].pageX
+            firstY = e.touches[0].pageY
         }
     )
 }
