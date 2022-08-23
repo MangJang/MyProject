@@ -2,6 +2,7 @@ let valueRL = -45
 let valueUD = -30
 let cube = document.querySelector(".cube")
 
+
 document.addEventListener("DOMContentLoaded", 
 function(e) {
     document.addEventListener("keydown", 

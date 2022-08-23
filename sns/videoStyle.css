@@ -370,6 +370,7 @@ body{
     overflow: hidden;
 }
 .category{
+    background-color: white;
     height: 48;
     width: 750;
     text-align: left;

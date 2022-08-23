@@ -112,6 +112,7 @@ body{
     width: calc(100% - 286px);
 }
 .category{
+    background-color: white;
     height: 56;
     text-align: center;
     line-height: 50px;
