@@ -1,8 +1,13 @@
+.body{
+}
 .background{
     display: grid;
-    grid-template-columns: repeat(18, minmax(60px, 5vw));
-    grid-template-rows: repeat(7, minmax(60px, 5vw));
+    align-items: center;
+    grid-template-columns: repeat(18, minmax(60px, auto));
+    grid-template-rows: repeat(7, minmax(60px, auto));
     gap: 4px;
+    margin: auto;
+    max-width: 95%;
 }
 
 .element-none1{
@@ -84,7 +89,9 @@
     position: fixed;
 
     width: 85%;
-    height: 85%;
+    min-width: 700;
+    height: 80%;
+    min-height: 500;
 
     top: -100%;
     left: 50%;
@@ -98,41 +105,28 @@
     transition: 0.5s;
 
     display: grid;
-    grid-template-columns: 20% 1fr;
+    grid-template-columns: minmax(20%, 200px) auto;
 
-    overflow: hidden;
     padding: 8px;
     overflow: visible;
+}
+.lore-box{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    overflow-y: hidden;
 }
 
 .lore-element{
     width: 100%;
-    height: 0;
-    padding-bottom: 100%;
     background-color: red;
     border-radius: 12px;
 
     display: grid;
-    grid-row-gap: 8px;
+    grid-template-rows: 0.8fr 1.4fr 1fr 1fr;
     
     text-align: center;
 }
 .lore-detail{
-    display: grid;
-    grid-template-rows: repeat(auto, 2);
-}
-.lore-detail > div{
-    font-size: 20;
-    border-bottom: 1px solid black;
-    height: 28;
-    padding: 8 0 8 4;
-    font-weight: bold;
-
-    display: grid;
-    grid-template-columns: 100px auto;
-}
-.value{
-    font-weight: normal;
 }
 
 .lore-number{
@@ -143,26 +137,34 @@
     font-weight: bolder;
 }
 .lore-name{
-    font-size: 2.5vw;
+    font-size: 3vw;
     
 }
 .lore-Ename{
-    font-size: 2.5vw;
-    
+    font-size: 3vw;
+}
+
+.energy{
+    font-size: 20;
+    border-bottom: 1px solid black;
+    height: 28;
+    padding: 8 0 8 4;
+    font-weight: bold;
+
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+.value{
+    font-weight: normal;
 }
 
 .explanation{
     margin: 24;
     font-size: 20;
 }
-.picture{
-    width: 100%;
-    height: 100%;
-    margin: auto auto;
-}
 .img{
     width: 100%;
-    margin-top: 12;
 }
 .exitButton{
     cursor: pointer;
@@ -185,4 +187,20 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.255);
+}
+
+
+@media (max-width:1200px) {
+    .lore-number{
+        font-size: 24;
+    }
+    .lore-sign{
+        font-size: 48;
+    }
+    .lore-name{
+        font-size: 36;
+    }
+    .lore-Ename{
+        font-size: 36;
+    }
 }

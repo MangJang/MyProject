@@ -39,13 +39,11 @@ for(let i = 0; i < nextButton.length; i++) {
             document.querySelector(".value").
             textContent = Energy[i]
             
-            if(explanation[i] != null){
-                document.querySelector(".explanation").
-                textContent = explanation[i]
-            } else {
-                document.querySelector(".explanation").
-                textContent = "설명글"
-            }
+            document.querySelector(".explanation").
+            textContent = explanation[i]
+
+            let test = document.querySelector(".lore-element")
+            test.style.height = test.offsetWidth + "px"
             
         }
     )
@@ -75,6 +73,12 @@ document.addEventListener("DOMContentLoaded",
     }
 )
 
+window.addEventListener("resize", function() {
+    let test = document.querySelector(".lore-element")
+    test.style.height = test.offsetWidth + "px"
+    }
+)
+
 let Energy  = [
     "1", "2",
     "2, 1", "2, 2", "2, 3", "2, 4", "2, 5", "2, 6", "2, 7", "2, 8",
@@ -84,5 +88,5 @@ let Energy  = [
 
 let explanation = [
     "인간이 현재까지 발견한 원소들 중에서 우주에서 가장 풍부하며, 가장 가볍고 간단한 구조를 가진 원자 번호가 가장 작은 원소다.",
-    "상온에선 기체로 존재하며 단원자 분자인 비활성 기체이며 우주 전체에서 수소 다음으로 흔한 원소이지만 매우 가벼워서 지구 중력으로 잡을 수 없어 서서히 지구에서 우주 공간으로 빠져나간다. 따라서 지구에서는 아주 희소하다"
+    "상온에선 기체로 존재하며 단원자 분자인 비활성 기체이며 우주 전체에서 수소 다음으로 흔한 원소이지만 매우 가벼워서 지구 중력으로 잡을 수 없어 서서히 지구에서 우주 공간으로 빠져나간다. 따라서 지구에서는 아주 희소하다."
 ]
