@@ -18,8 +18,6 @@ for(let i = 0; i < nextButton.length; i++) {
 
             asdf.style.top = "50%"
 
-
-
             let img = document.querySelector(".img")
             let num = nextButton[i].textContent
             input = num.replace(/[^a-z]/gi,"")
@@ -35,6 +33,13 @@ for(let i = 0; i < nextButton.length; i++) {
             input = num.replace(/[^가-힣]/gi,"")
             document.querySelector(".lore-name").
             textContent = input
+            if(input.length >= 5) {
+                document.querySelector(".lore-name").
+                style.letterSpacing = "-0.1em"
+            } else {
+                document.querySelector(".lore-name").
+                style.letterSpacing = ""
+            }
 
             document.querySelector(".value").
             textContent = Energy[i]
