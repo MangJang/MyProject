@@ -29,6 +29,11 @@ for(let i = 0; i < nextButton.length; i++) {
             input = num.replace(/[^0-9]/gi,"")
             document.querySelector(".lore-number").
             textContent = input
+
+            document.querySelector(".lore-Ename").
+            textContent = english[input-1]
+
+
             
             input = num.replace(/[^가-힣]/gi,"")
             document.querySelector(".lore-name").
@@ -95,3 +100,5 @@ let explanation = [
     "인간이 현재까지 발견한 원소들 중에서 우주에서 가장 풍부하며, 가장 가볍고 간단한 구조를 가진 원자 번호가 가장 작은 원소다.",
     "상온에선 기체로 존재하며 단원자 분자인 비활성 기체이며 우주 전체에서 수소 다음으로 흔한 원소이지만 매우 가벼워서 지구 중력으로 잡을 수 없어 서서히 지구에서 우주 공간으로 빠져나간다. 따라서 지구에서는 아주 희소하다."
 ]
+
+let english = ["Hydrogen", "Helium", "Lithium", "Beryllium", "Boron", "Carbon", "Nitrogen", "Oxygen", "Fluorine", "Neon", "Sodium", "Magnesium", "Aluminium", "Silicon", "Phosphorus", "Sulfur", "Chlorine", "Argon", "Potassium", "Calcium", "Scandium", "Titanium", "Vanadium", "Chromium", "Manganese", "Iron", "Cobalt", "Nickel", "Copper", "Zinc", "Gallium", "Germanium", "Arsenic", "Selenium", "Bromine", "Krypton", "Rubidium", "Strontium", "Yttrium", "Zirconium", "Niobium", "Molybdenum", "Technetium", "Ruthenium", "Rhodium", "Palladium", "Silver", "Cadmium", "Indium", "Tin", "Antimony", "Tellurium", "Iodine", "Xenon", "Caesium", "Barium", "Lanthanum", "Cerium", "Praseodymium", "Neodymium", "Promethium", "Samarium", "Europium", "Gadolinium", "Terbium", "Dysprosium", "Holmium", "Erbium", "Thulium", "Ytterbium", "Lutetium", "Hafnium", "Tantalum", "Tungsten", "Rhenium", "Osmium", "Iridium", "Platinum", "Gold", "Mercury", "Thallium", "Lead", "Bismuth", "Polonium", "Astatine", "Radon", "Francium", "Radium", "Actinium", "Thorium", "Protactinium", "Uranium", "Neptunium", "Plutonium", "Americium", "Curium", "Berkelium", "Californium", "Einsteinium", "Fermium", "Mendelevium", "Nobelium", "Lawrencium", "Rutherfordium", "Dubnium", "Seaborgium", "Bohrium", "Hassium", "Meitnerium", "Darmstadtium", "Roentgenium", "Copernicium", "Nihonium", "Flerovium", "Moscovium", "Livermorium", "Tennessine", "Oganesson"]
