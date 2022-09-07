@@ -82,7 +82,6 @@
     text-align: center;
 }
 .element{
-    word-break:keep-all;
     height: 35%;
     line-height: 150%;
     text-align: center;
@@ -91,8 +90,9 @@
     overflow: visible;
 }
 .long{
+    font-size: .85vw;
     letter-spacing: -0.1em;
-    text-align: left;
+    text-align: center;
 }
 .simple{
     cursor: pointer;
