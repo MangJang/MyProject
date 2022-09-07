@@ -43,26 +43,20 @@
     margin: -2;
 }
 
-.element-alkali1{
+.element-alkali{
     background-color: #FF9D9D;
 }
-.element-alkali2{
-    background-color: #FFDEAD;
+.element-inert{
+    background-color: #e5bde5;
 }
-.element-transition1{
-    background-color: #FFC0C0;
-}
-.element-transition2{
-    background-color: #CCCCCC;
-}
-.element-metalloid{
-    background-color: #CCCC99;
-}
-.element-noble{
-    background-color: #C0FFFF;
+.element-metal{
+    background-color: #fac5b7;
 }
 .element-nonmetal{
-    background-color: #A0FFA0;
+    background-color: #8ced8c;
+}
+.element-metalloid{
+    background-color: #9ee5d4;
 }
 .element-lanthanum{
     background-color: #FFBFFF;
