@@ -129,7 +129,7 @@
     transition: 0.5s;
 
     display: grid;
-    grid-template-columns: minmax(20%, 200px) auto;
+    grid-template-columns: minmax(20%, 250px) auto;
 
     padding: 8px;
     overflow: visible;
